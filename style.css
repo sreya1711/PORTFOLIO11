@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f5f9;
+  color: #333;
+}
+
+nav {
+  background-color: #003366;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+  padding: 2rem;
+}
+
+.hero-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+  margin-right: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+section h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.objective, .skills, .projects {
+  margin: 2rem auto;
+  background: #ffffff;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.blink {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.project-card {
+  background: #f9f9f9;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 600px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffc107;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

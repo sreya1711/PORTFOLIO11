@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreya Rajesh | Portfolio</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .section-float {
+      animation: float-section 6s ease-in-out infinite;
+    }
+    @keyframes float-section {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    .glow {
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
+      animation: glow-pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes glow-pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3);
+      }
+    }
+   @keyframes blinkColor {
+  0%, 100% {
+    color: #60a5fa;  /* Light Blue */
+  }
+  50% {
+    color: #1e3a8a;  /* Dark Blue */
+  }
+}
+
+.blink {
+  animation: blinkColor 1s infinite;
+}
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white via-blue-100 to-white text-gray-900 font-sans">
+  <nav class="flex justify-between items-center px-8 py-4 text-lg sticky top-0 bg-white shadow-md z-50">
+    <h1 class="text-2xl font-bold blink">SREYA</h1>
+
+
+    <ul class="flex gap-6 text-blue-700">
+      <li><a href="#about" class="hover:text-blue-500">About</a></li>
+      <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+      <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4">
+    <img src="image1.jpg" alt="Sreya" class="mx-auto rounded-full border-4 border-blue-500 floating shadow-lg w-64 h-64 object-cover mb-7">
+    <h1 class="text-5xl font-extrabold tracking-wide text-blue-800">SREYA RAJESH</h1>
+    <p class="text-xl mt-3 text-gray-700">Aspiring Software Developer | Front-end developer</p>
+    <a href="SREYA.CV.pdf" download class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+      ⬇ Download CV
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 rounded-xl mb-10 shadow-md">
+    <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
+    <p class="text-gray-700 leading-relaxed hidden md:block">
+      I am a passionate and dedicated Computer Science student aiming to become a skilled Software Developer.<br>
+      I enjoy solving real-world problems through coding and creative thinking.<br>
+      My interests include full-stack development, AI-based applications, and database systems.<br>
+      I strive to build efficient, user-friendly, and scalable software solutions.<br>
+      I'm constantly learning and eager to contribute to impactful tech projects.
+    </p>
+    <p class="text-gray-700 leading-relaxed block md:hidden">
+      Aspiring Software Developer passionate about solving real-world problems through code.<br>
+      Interested in full-stack, AI, and impactful tech projects.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-4xl mx-auto px-6 py-10 section-float glow">
+    <h2 class="text-3xl font-bold text-blue-700 mb-8 text-center">Projects</h2>
+
+    <!-- Project 1 -->
+   <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row gap-6">
+  <img src="project1.png" alt="Burger Shop" class="rounded-lg w-full md:w-1/2 object-cover">
+  <div>
+    <h3 class="text-xl font-semibold text-blue-600 mb-2">BurgerByte – E-commerce Burger Shop</h3>
+    <p>A responsive website for a burger shop with live cart updates, pricing, and item management using HTML, CSS, and JavaScript.</p>
+  </div>
+</div>
+
+    <!-- Project 2 -->
+    <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row-reverse gap-6">
+  <img src="project2.png" alt="Sudoku Game" class="rounded-lg w-full md:w-1/2 object-cover">
+  <div>
+    <h3 class="text-xl font-semibold text-blue-600 mb-2">Sudoku Solver & Player – Web Platform</h3>
+    <p>A clean, interactive Sudoku game built using HTML, CSS, and JavaScript that allows users to play and auto-solve puzzles. Includes timer, validations, and a smooth UI.</p>
+  </div>
+</div>
+
+    <!-- Project 3 -->
+    <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row gap-6">
+  <img src="project3.jpg" alt="RRC Club Event" class="rounded-lg w-full md:w-1/2 object-cover">
+  <div>
+    <h3 class="text-xl font-semibold text-blue-600 mb-2">College RRC Club Event – Frontend Page</h3>
+    <p>A static event webpage for the Red Ribbon Club (RRC) built using HTML, CSS, and JavaScript. Includes event info, registration form, and a responsive layout for students.</p>
+  </div>
+</div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 rounded-xl mb-10 shadow-md">
+  <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact Me</h2>
+
+  <p class="mb-3 flex items-center gap-2">
+    <i class="fas fa-envelope text-blue-600"></i>
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="w-6 h-6 inline-block">
+
+    <strong>Email:</strong> <a href="mailto:sreya@example.com" class="text-blue-600 underline">sreyarajesh110805@gmail.com</a>
+  </p>
+
+  <p class="mb-3 flex items-center gap-2">
+    <i class="fas fa-phone text-blue-600"></i>
+    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="w-6 h-6 inline-block">
+
+    <strong>Phone:</strong> +91 8848916341
+  </p>
+
+  <p class="mb-3 flex items-center gap-2">
+    <i class="fab fa-linkedin text-blue-600"></i>
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-6 h-6 inline-block">
+
+    <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sreya" class="text-blue-600 underline">https://www.linkedin.com/in/sreya-rajesh11/</a>
+  </p>
+
+  <p class="mb-3 flex items-center gap-2">
+    <i class="fab fa-github text-gray-800"></i>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="w-6 h-6 inline-block">
+
+    <strong>GitHub:</strong> <a href="https://github.com/sreya" class="text-blue-600 underline">https://github.com/sreya1711</a>
+  </p>
+
+  <p class="mb-3 flex items-center gap-2">
+    <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="w-6 h-6">
+    <strong>LeetCode:</strong> <a href="https://leetcode.com/sreya" class="text-blue-600 underline">https://leetcode.com/u/Sreya_11/</a>
+  </p>
+</section>
+</body>
+</html>
