@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sreya Rajesh | Portfolio</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+  <!-- Updated Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <style>
     html {
       scroll-behavior: smooth;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     .floating {
       animation: float 3s ease-in-out infinite;
     }
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
+      0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
     .section-float {
@@ -23,7 +30,7 @@
       overflow: auto;
     }
     @keyframes float-section {
-      0%, 100% { transform: translateY(0px); }
+      0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
     }
     .glow {
@@ -38,53 +45,65 @@
         box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3);
       }
     }
-   @keyframes blinkColor {
-  0%, 100% {
-    color: #60a5fa;  /* Light Blue */
-  }
-  50% {
-    color: #1e3a8a;  /* Dark Blue */
-  }
-}
-
-.blink {
-  animation: blinkColor 1s infinite;
-}
+    @keyframes blinkColor {
+      0%, 100% { color: #60a5fa; }
+      50% { color: #1e3a8a; }
+    }
+    .blink {
+      animation: blinkColor 1s infinite;
+    }
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
   </style>
 </head>
-<body class="bg-gradient-to-b from-white via-blue-100 to-white text-gray-900 font-sans">
-  <nav class="flex justify-between items-center px-8 py-4 text-lg sticky top-0 bg-white shadow-md z-50">
-    <h1 class="text-2xl font-bold blink">SREYA</h1>
+<body class="bg-white dark:bg-blue-900 text-gray-900 dark:text-gray-100 font-sans">
 
+  <div id="tsparticles"></div>
 
-    <ul class="flex gap-6 text-blue-700">
-      <li><a href="#about" class="hover:text-blue-500">About</a></li>
-      <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-      <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-    </ul>
+  <!-- Navigation Bar -->
+  <nav class="flex justify-between items-center px-8 py-4 text-lg sticky top-0 bg-blue-100 dark:bg-gray-900 shadow-md z-50">
+    <h1 class="text-2xl font-bold blink text-blue-900 dark:text-white">SREYA</h1>
+    <div class="flex items-center gap-4">
+      <ul class="flex gap-6 text-blue-700 dark:text-blue-200">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="text-xl text-blue-900 dark:text-white hover:scale-110 transition">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </button>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="text-center py-16 px-4">
+  <section id="home" class="text-center py-16 px-4">
     <img src="image1.jpg" alt="Sreya" class="mx-auto rounded-full border-4 border-blue-500 floating shadow-lg w-64 h-64 object-cover mb-7">
-    <h1 class="text-5xl font-extrabold tracking-wide text-blue-800">SREYA RAJESH</h1>
-    <p class="text-xl mt-3 text-gray-700">Aspiring Software Developer | Front-end developer</p>
+    <h1 class="text-5xl font-extrabold tracking-wide text-white dark:text-blue-900">SREYA RAJESH</h1>
+    <p class="text-xl mt-3 text-blue-200 dark:text-gray-700">Aspiring Software Developer | Front-end developer</p>
     <a href="SREYA.CV.pdf" download class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
       ⬇ Download CV
     </a>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 rounded-xl mb-10 shadow-md">
+  <section id="about" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 dark:bg-gray-100 dark:text-gray-800 rounded-xl mb-10 shadow-md">
     <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
-    <p class="text-gray-700 leading-relaxed hidden md:block">
+    <p class="leading-relaxed hidden md:block">
       I am a passionate and dedicated Computer Science student aiming to become a skilled Software Developer.<br>
       I enjoy solving real-world problems through coding and creative thinking.<br>
       My interests include full-stack development, AI-based applications, and database systems.<br>
       I strive to build efficient, user-friendly, and scalable software solutions.<br>
       I'm constantly learning and eager to contribute to impactful tech projects.
     </p>
-    <p class="text-gray-700 leading-relaxed block md:hidden">
+    <p class="leading-relaxed block md:hidden">
       Aspiring Software Developer passionate about solving real-world problems through code.<br>
       Interested in full-stack, AI, and impactful tech projects.
     </p>
@@ -92,71 +111,108 @@
 
   <!-- Projects Section -->
   <section id="projects" class="max-w-4xl mx-auto px-6 py-10 section-float glow">
-    <h2 class="text-3xl font-bold text-blue-700 mb-8 text-center">Projects</h2>
-
+    <h2 class="text-3xl font-bold text-blue-300 mb-8 text-center">Projects</h2>
     <!-- Project 1 -->
-   <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row gap-6">
-  <img src="project1.png" alt="Burger Shop" class="rounded-lg w-full md:w-1/2 object-cover">
-  <div>
-    <h3 class="text-xl font-semibold text-blue-600 mb-2">BurgerByte – E-commerce Burger Shop</h3>
-    <p>A responsive website for a burger shop with live cart updates, pricing, and item management using HTML, CSS, and JavaScript.</p>
-  </div>
-</div>
-
-    <!-- Project 2 -->
-    <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row-reverse gap-6">
-  <img src="project2.png" alt="Sudoku Game" class="rounded-lg w-full md:w-1/2 object-cover">
-  <div>
-    <h3 class="text-xl font-semibold text-blue-600 mb-2">Sudoku Solver & Player – Web Platform</h3>
-    <p>A clean, interactive Sudoku game built using HTML, CSS, and JavaScript that allows users to play and auto-solve puzzles. Includes timer, validations, and a smooth UI.</p>
-  </div>
-</div>
-
-    <!-- Project 3 -->
-    <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row gap-6">
-  <img src="project3.jpg" alt="RRC Club Event" class="rounded-lg w-full md:w-1/2 object-cover">
-  <div>
-    <h3 class="text-xl font-semibold text-blue-600 mb-2">College RRC Club Event – Frontend Page</h3>
-    <p>A static event webpage for the Red Ribbon Club (RRC) built using HTML, CSS, and JavaScript. Includes event info, registration form, and a responsive layout for students.</p>
-  </div>
-</div>
+    <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row gap-6 dark:bg-gray-100">
+      <img src="project1.png" alt="Burger Shop" class="rounded-lg w-full md:w-1/2 object-cover">
+      <div>
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">BurgerByte – E-commerce Burger Shop</h3>
+        <p>A responsive website with live cart updates using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 rounded-xl mb-10 shadow-md">
-  <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact Me</h2>
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 rounded-xl mb-10 shadow-md dark:bg-gray-100">
+    <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact Me</h2>
+    <p class="mb-3 flex items-center gap-2">
+      <i class="fas fa-envelope text-blue-600"></i>
+      <strong>Email:</strong> <a href="mailto:sreyarajesh110805@gmail.com" class="text-blue-600 underline">sreyarajesh110805@gmail.com</a>
+    </p>
+    <p class="mb-3 flex items-center gap-2">
+      <i class="fas fa-phone text-blue-600"></i>
+      <strong>Phone:</strong> +91 8848916341
+    </p>
+    <p class="mb-3 flex items-center gap-2">
+      <i class="fab fa-linkedin text-blue-600"></i>
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sreya-rajesh11/" class="text-blue-600 underline">linkedin.com/in/sreya-rajesh11</a>
+    </p>
+    <p class="mb-3 flex items-center gap-2">
+      <i class="fab fa-github text-gray-800"></i>
+      <strong>GitHub:</strong> <a href="https://github.com/sreya1711" class="text-blue-600 underline">github.com/sreya1711</a>
+    </p>
+    <p class="mb-3 flex items-center gap-2">
+      <strong>LeetCode:</strong> <a href="https://leetcode.com/u/Sreya_11/" class="text-blue-600 underline">leetcode.com/u/Sreya_11</a>
+    </p>
+  </section>
 
-  <p class="mb-3 flex items-center gap-2">
-    <i class="fas fa-envelope text-blue-600"></i>
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="w-6 h-6 inline-block">
+  <!-- tsParticles -->
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: false },
+      background: { color: { value: "#1e3a8a" } },
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: ["#ffffff", "#93c5fd"] },
+        shape: { type: "circle" },
+        opacity: { value: 0.6, random: true },
+        size: { value: 3, random: true },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          outModes: { default: "bounce" }
+        },
+        links: {
+          enable: true,
+          distance: 100,
+          color: "#60a5fa",
+          opacity: 0.4,
+          width: 1
+        }
+      },
+      interactivity: {
+        detectsOn: "window",
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "repulse" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 150, duration: 0.6 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 
-    <strong>Email:</strong> <a href="mailto:sreya@example.com" class="text-blue-600 underline">sreyarajesh110805@gmail.com</a>
-  </p>
+  <!-- Theme Toggle Script -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
 
-  <p class="mb-3 flex items-center gap-2">
-    <i class="fas fa-phone text-blue-600"></i>
-    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="w-6 h-6 inline-block">
+    // Check for saved theme preference or use system preference
+    if (localStorage.getItem("theme") === "dark" || 
+        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("dark");
+      themeIcon.classList.replace("fa-moon", "fa-sun");
+    }
 
-    <strong>Phone:</strong> +91 8848916341
-  </p>
-
-  <p class="mb-3 flex items-center gap-2">
-    <i class="fab fa-linkedin text-blue-600"></i>
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-6 h-6 inline-block">
-
-    <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sreya" class="text-blue-600 underline">https://www.linkedin.com/in/sreya-rajesh11/</a>
-  </p>
-
-  <p class="mb-3 flex items-center gap-2">
-    <i class="fab fa-github text-gray-800"></i>
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="w-6 h-6 inline-block">
-
-    <strong>GitHub:</strong> <a href="https://github.com/sreya" class="text-blue-600 underline">https://github.com/sreya1711</a>
-  </p>
-
-  <p class="mb-3 flex items-center gap-2">
-    <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="w-6 h-6">
-    <strong>LeetCode:</strong> <a href="https://leetcode.com/sreya" class="text-blue-600 underline">https://leetcode.com/u/Sreya_11/</a>
-  </p>
-</section>
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      
+      // Toggle between moon and sun icons
+      if (isDark) {
+        themeIcon.classList.replace("fa-moon", "fa-sun");
+      } else {
+        themeIcon.classList.replace("fa-sun", "fa-moon");
+      }
+      
+      // For debugging
+      console.log("Theme toggled:", isDark ? "dark" : "light");
+    });
+  </script>
 </body>
 </html>
