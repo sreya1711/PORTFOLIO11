@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sreya Rajesh | Portfolio</title>
-  <!-- Updated Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -14,59 +13,22 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .floating {
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .section-float {
-      animation: float-section 6s ease-in-out infinite;
-      overflow: auto;
-    }
-    @keyframes float-section {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-    .glow {
-      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
-      animation: glow-pulse 2.5s ease-in-out infinite;
-    }
-    @keyframes glow-pulse {
-      0%, 100% {
-        box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
-      }
-      50% {
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3);
-      }
-    }
-    @keyframes blinkColor {
-      0%, 100% { color: #60a5fa; }
-      50% { color: #1e3a8a; }
-    }
-    .blink {
-      animation: blinkColor 1s infinite;
-    }
-    #tsparticles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+    html { scroll-behavior: smooth; transition: background-color 0.3s ease, color 0.3s ease; }
+    .floating { animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .section-float { animation: float-section 6s ease-in-out infinite; overflow: auto; }
+    @keyframes float-section { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .glow { box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2); animation: glow-pulse 2.5s ease-in-out infinite; }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2); } 50% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3); } }
+    @keyframes blinkColor { 0%, 100% { color: #60a5fa; } 50% { color: #1e3a8a; } }
+    .blink { animation: blinkColor 1s infinite; }
+    #tsparticles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
   </style>
 </head>
 <body class="bg-white dark:bg-blue-900 text-gray-900 dark:text-gray-100 font-sans">
 
   <div id="tsparticles"></div>
 
-  <!-- Navigation Bar -->
   <nav class="flex justify-between items-center px-8 py-4 text-lg sticky top-0 bg-blue-100 dark:bg-gray-900 shadow-md z-50">
     <h1 class="text-2xl font-bold blink text-blue-900 dark:text-white">SREYA</h1>
     <div class="flex items-center gap-4">
@@ -76,14 +38,12 @@
         <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
         <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
       </ul>
-      <!-- Theme Toggle Button -->
       <button id="theme-toggle" class="text-xl text-blue-900 dark:text-white hover:scale-110 transition">
         <i id="theme-icon" class="fas fa-moon"></i>
       </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section id="home" class="text-center py-16 px-4">
     <img src="image1.jpg" alt="Sreya" class="mx-auto rounded-full border-4 border-blue-500 floating shadow-lg w-64 h-64 object-cover mb-7">
     <h1 class="text-5xl font-extrabold tracking-wide text-white dark:text-blue-900">SREYA RAJESH</h1>
@@ -93,60 +53,195 @@
     </a>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 dark:bg-gray-100 dark:text-gray-800 rounded-xl mb-10 shadow-md">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
-    <p class="leading-relaxed hidden md:block">
-      I am a passionate and dedicated Computer Science student aiming to become a skilled Software Developer.<br>
-      I enjoy solving real-world problems through coding and creative thinking.<br>
-      My interests include full-stack development, AI-based applications, and database systems.<br>
-      I strive to build efficient, user-friendly, and scalable software solutions.<br>
-      I'm constantly learning and eager to contribute to impactful tech projects.
-    </p>
-    <p class="leading-relaxed block md:hidden">
-      Aspiring Software Developer passionate about solving real-world problems through code.<br>
-      Interested in full-stack, AI, and impactful tech projects.
-    </p>
-  </section>
+<section id="about" class="max-w-7xl mx-auto px-6 py-12 text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
 
-  <!-- Projects Section -->
-  <section id="projects" class="max-w-4xl mx-auto px-6 py-10 section-float glow">
-    <h2 class="text-3xl font-bold text-blue-300 mb-8 text-center">Projects</h2>
-    <!-- Project 1 -->
-    <div class="bg-white p-6 rounded-xl shadow mb-10 text-gray-800 flex flex-col md:flex-row gap-6 dark:bg-gray-100">
-      <img src="project1.png" alt="Burger Shop" class="rounded-lg w-full md:w-1/2 object-cover">
-      <div>
-        <h3 class="text-xl font-semibold text-blue-600 mb-2">BurgerByte – E-commerce Burger Shop</h3>
-        <p>A responsive website with live cart updates using HTML, CSS, and JavaScript.</p>
+  <div class="flex flex-col md:flex-row items-start gap-10">
+
+    <!-- Left Panel - Image -->
+    <div class="md:w-1/3 w-full flex justify-center">
+      <div class="p-2 rounded-xl border-4 border-blue-500 glow-image shadow-lg transition-all duration-300">
+        <img src="image1.jpg" alt="Sreya Rajesh" class="rounded-xl w-64 h-64 object-cover">
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="max-w-3xl mx-auto px-6 py-10 section-float glow bg-white text-gray-800 rounded-xl mb-10 shadow-md dark:bg-gray-100">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact Me</h2>
-    <p class="mb-3 flex items-center gap-2">
-      <i class="fas fa-envelope text-blue-600"></i>
-      <strong>Email:</strong> <a href="mailto:sreyarajesh110805@gmail.com" class="text-blue-600 underline">sreyarajesh110805@gmail.com</a>
-    </p>
-    <p class="mb-3 flex items-center gap-2">
-      <i class="fas fa-phone text-blue-600"></i>
-      <strong>Phone:</strong> +91 8848916341
-    </p>
-    <p class="mb-3 flex items-center gap-2">
-      <i class="fab fa-linkedin text-blue-600"></i>
-      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sreya-rajesh11/" class="text-blue-600 underline">linkedin.com/in/sreya-rajesh11</a>
-    </p>
-    <p class="mb-3 flex items-center gap-2">
-      <i class="fab fa-github text-gray-800"></i>
-      <strong>GitHub:</strong> <a href="https://github.com/sreya1711" class="text-blue-600 underline">github.com/sreya1711</a>
-    </p>
-    <p class="mb-3 flex items-center gap-2">
-      <strong>LeetCode:</strong> <a href="https://leetcode.com/u/Sreya_11/" class="text-blue-600 underline">leetcode.com/u/Sreya_11</a>
-    </p>
-  </section>
+    <!-- Right Panel - Info Boxes -->
+    <div class="md:w-2/3 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
 
-  <!-- tsParticles -->
+      <!-- About Box -->
+      <div onclick="this.classList.toggle('glow-active')" class="glow-box bg-blue-900 rounded-2xl p-6 border border-blue-400 cursor-pointer transition-all duration-300">
+        <h3 class="text-xl font-semibold text-cyan-300 mb-4">
+          <i class="fas fa-user-circle mr-2"></i>ABOUT
+        </h3>
+        <p>I am Sreya Rajesh, a passionate front-end developer and aspiring software engineer.</p>
+        <p>I love crafting intuitive UI designs and bringing them to life using web technologies.</p>
+        <p>My work blends creativity with logical thinking, aiming to deliver seamless user experiences.</p>
+        <p>I strive to stay current with evolving tech and continuously grow as a developer.</p>
+      </div>
+
+      <!-- Skills Box -->
+      <div onclick="this.classList.toggle('glow-active')" class="glow-box bg-blue-900 rounded-2xl p-6 border border-blue-400 cursor-pointer transition-all duration-300">
+        <h3 class="text-xl font-semibold text-cyan-300 mb-4 flex items-center">
+          <i class="fas fa-laptop-code mr-2"></i>SKILLS
+        </h3>
+
+        <div class="space-y-3 text-white">
+          <div class="flex items-center gap-2 glow-frontend">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-6 h-6" alt="HTML">
+            <span>HTML</span>
+          </div>
+          <div class="flex items-center gap-2 glow-frontend">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-6 h-6" alt="CSS">
+            <span>CSS</span>
+          </div>
+          <div class="flex items-center gap-2 glow-frontend">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+          <div class="flex items-center gap-2 glow-frontend">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" alt="React.js">
+            <span>React.js</span>
+          </div>
+
+          <div class="flex items-center gap-2 glow-backend">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-6 h-6" alt="Node.js">
+            <span>Node.js</span>
+          </div>
+          <div class="flex items-center gap-2 glow-backend">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-6 h-6 bg-white rounded-sm" alt="Express.js">
+            <span>Express.js</span>
+          </div>
+
+          <div class="flex items-center gap-2 glow-database">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-6 h-6" alt="MongoDB">
+            <span>MongoDB</span>
+          </div>
+
+          <div class="flex items-center gap-2 glow-tools">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6" alt="Git">
+            <span>Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glow Styles -->
+  <style>
+    .glow-box {
+      transition: all 0.4s ease;
+    }
+
+    .glow-active {
+      box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 30px rgba(0, 255, 255, 0.4),
+        0 0 40px rgba(0, 255, 255, 0.3);
+      transform: scale(1.02);
+      border: 2px solid cyan;
+    }
+
+    .glow-box:hover {
+      box-shadow:
+        0 0 12px rgba(0, 300, 300, 0.7),
+        0 0 24px rgba(0, 300, 300, 0.6);
+    }
+
+    .glow-image:hover {
+      box-shadow:
+        0 0 15px rgba(59, 130, 246, 0.7),
+        0 0 30px rgba(96, 165, 250, 0.6),
+        0 0 45px rgba(147, 197, 253, 0.5);
+      transform: scale(1.02);
+    }
+
+    /* Colored text glows for skill categories */
+    .glow-frontend:hover {
+      text-shadow: 0 0 10px #facc15, 0 0 20px #fde68a;
+    }
+
+    .glow-backend:hover {
+      text-shadow: 0 0 10px #4ade80, 0 0 20px #bbf7d0;
+    }
+
+    .glow-database:hover {
+      text-shadow: 0 0 10px #38bdf8, 0 0 20px #bae6fd;
+    }
+
+    .glow-tools:hover {
+      text-shadow: 0 0 10px #f43f5e, 0 0 20px #fecdd3;
+    }
+  </style>
+</section>
+
+<section id="projects" class="max-w-7xl mx-auto px-6 py-16 text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- Sudoku Platform -->
+    <div class="bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300 glow-card">
+      <h3 class="text-2xl font-semibold mb-3 text-cyan-300">Sudoku Platform</h3>
+      <img src="image.png" alt="Sudoku Project" class="rounded-lg mb-4 w-full h-40 object-cover border border-white">
+      <p class="mb-3 text-sm text-gray-200">An interactive web-based Sudoku game built using HTML, CSS, and JavaScript. Features grid validation, timer, and user-friendly design.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-6 h-6" alt="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-6 h-6" alt="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript">
+      </div>
+      <div class="flex gap-4">
+        <a href="https://sudoku11.vercel.app/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fas fa-external-link-alt"></i> Live</a>
+        <a href="https://github.com/sreya1711/sudoku11" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <!-- Phonebook App -->
+    <div class="bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300 glow-card">
+      <h3 class="text-2xl font-semibold mb-3 text-cyan-300">Phonebook App</h3>
+      <img src="image3.png" alt="Phonebook Project" class="rounded-lg mb-4 w-full h-40 object-cover border border-white">
+      <p class="mb-3 text-sm text-gray-200">A simple yet efficient Phonebook application using HTML, CSS, JavaScript (Frontend) and C (Backend Logic Simulation).</p>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-6 h-6" alt="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-6 h-6" alt="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="w-6 h-6" alt="C Language">
+      </div>
+      <div class="flex gap-4">
+        <a href="https://phone-book-orpin.vercel.app/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fas fa-external-link-alt"></i> Live</a>
+        <a href="https://github.com/sreya1711/phone-book-/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <!-- Mood Journal -->
+    <div class="bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300 glow-card">
+      <h3 class="text-2xl font-semibold mb-3 text-cyan-300">Mood Journal</h3>
+      <img src="image2.png" alt="Mood Journal Project" class="rounded-lg mb-4 w-full h-40 object-cover border border-white">
+      <p class="mb-3 text-sm text-gray-200">A mood-tracking journal app built with React. It allows users to log daily moods, write reflections, and view emotional trends over time.</p>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" alt="React">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-6 h-6" alt="VS Code">
+      </div>
+      <div class="flex gap-4">
+        <a href="https://mood-journal-swart.vercel.app/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fas fa-external-link-alt"></i> Live</a>
+        <a href="https://github.com/sreya1711/mood-journal" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glowing effect -->
+  <style>
+    .glow-card:hover {
+      box-shadow:
+        0 0 12px rgba(0, 255, 255, 0.4),
+        0 0 24px rgba(0, 255, 255, 0.3),
+        0 0 36px rgba(0, 255, 255, 0.2);
+      transform: scale(1.02);
+      border-color: cyan;
+    }
+  </style>
+</section>
+
   <script>
     tsParticles.load("tsparticles", {
       fullScreen: { enable: false },
@@ -157,60 +252,29 @@
         shape: { type: "circle" },
         opacity: { value: 0.6, random: true },
         size: { value: 3, random: true },
-        move: {
-          enable: true,
-          speed: 1.5,
-          direction: "none",
-          outModes: { default: "bounce" }
-        },
-        links: {
-          enable: true,
-          distance: 100,
-          color: "#60a5fa",
-          opacity: 0.4,
-          width: 1
-        }
+        move: { enable: true, speed: 1.5, direction: "none", outModes: { default: "bounce" } },
+        links: { enable: true, distance: 100, color: "#60a5fa", opacity: 0.4, width: 1 }
       },
       interactivity: {
         detectsOn: "window",
-        events: {
-          onHover: { enable: true, mode: "repulse" },
-          onClick: { enable: true, mode: "repulse" },
-          resize: true
-        },
-        modes: {
-          repulse: { distance: 150, duration: 0.6 }
-        }
+        events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "repulse" }, resize: true },
+        modes: { repulse: { distance: 150, duration: 0.6 } }
       },
       retina_detect: true
     });
-  </script>
 
-  <!-- Theme Toggle Script -->
-  <script>
     const themeToggle = document.getElementById("theme-toggle");
     const themeIcon = document.getElementById("theme-icon");
-
-    // Check for saved theme preference or use system preference
-    if (localStorage.getItem("theme") === "dark" || 
-        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    if (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
       document.documentElement.classList.add("dark");
       themeIcon.classList.replace("fa-moon", "fa-sun");
     }
-
     themeToggle.addEventListener("click", () => {
       document.documentElement.classList.toggle("dark");
       const isDark = document.documentElement.classList.contains("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
-      
-      // Toggle between moon and sun icons
-      if (isDark) {
-        themeIcon.classList.replace("fa-moon", "fa-sun");
-      } else {
-        themeIcon.classList.replace("fa-sun", "fa-moon");
-      }
-      
-      // For debugging
+      if (isDark) { themeIcon.classList.replace("fa-moon", "fa-sun"); }
+      else { themeIcon.classList.replace("fa-sun", "fa-moon"); }
       console.log("Theme toggled:", isDark ? "dark" : "light");
     });
   </script>
