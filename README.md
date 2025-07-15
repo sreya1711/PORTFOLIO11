@@ -1,7 +1,6 @@
 # 🧑‍💻 Sreya Rajesh | Developer Portfolio
 
-Welcome to my personal portfolio website! I'm **Sreya Rajesh**, a passionate Computer Science student and aspiring Software Developer. This website showcases my skills, projects, interests, and a bit about who I am.
-
+Welcome to my personal developer portfolio built with HTML, CSS, and a touch of animation. This site showcases who I am, the projects I've worked on, and how to get in touch with me!
 ## 🚀 Live Website
 
 🔗 [View Portfolio](https://portfolio-11-eta.vercel.app/)  
