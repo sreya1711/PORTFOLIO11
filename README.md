@@ -42,6 +42,7 @@ Feel free to reach out if you'd like to collaborate or connect!
 - 📧 Email: [sreyarajesh110805@gmail.com](mailto:sreyarajesh110805@gmail.com)  
 - 💼 LinkedIn: [linkedin.com/in/sreya-rajesh11](https://www.linkedin.com/in/sreya-rajesh11/)  
 - 🐙 GitHub: [github.com/sreya1711](https://github.com/sreya1711)
+- 📱 Phone: +91 8848916341
 ---
 
 ## 🌟 Support
