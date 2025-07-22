@@ -45,8 +45,6 @@ Feel free to reach out if you'd like to collaborate or connect!
 - 📱 Phone: +91 8848916341
 ---
 
-## 🌟 Support
-If you like this project, please consider giving it a ⭐ on GitHub.
-Your support and feedback mean a lot to me!
+"The best way to predict the future is to build it."
 
 ---
