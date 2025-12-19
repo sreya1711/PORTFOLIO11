@@ -487,7 +487,7 @@
 <!-- LEFT: FORM -->
 <div class="bg-blue-900/70 rounded-2xl p-8 border border-cyan-400
             hover:shadow-[0_0_20px_#0ff] transition-shadow duration-300">
-  <form action="https://formspree.io/f/xkgzwjky" method="POST" class="space-y-6">
+<form id="contact-form" class="space-y-6">
     <!-- hidden fields (optional but useful) -->
     <input type="hidden" name="_subject" value="New message from portfolio">
 
@@ -622,7 +622,7 @@
   
   </script>
   <script>
-const form = document.querySelector("form");
+const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -637,24 +637,29 @@ form.addEventListener("submit", async (e) => {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message })
-    });
+    const response = await fetch(
+      "https://portfolio11-2.onrender.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+      }
+    );
 
-    const data = await response.json(); // parse JSON from backend
+    const data = await response.json();
 
-    if (data.status === "success") {
-      alert(data.message);
+    if (response.ok) {
+      alert("✅ Message sent successfully!");
       form.reset();
     } else {
-      alert(data.message || "Failed to send message.");
+      alert(data.message || "❌ Failed to send message");
     }
 
-  } catch (err) {
-    console.error("Error sending message:", err);
-    alert("Failed to send message. Please try again later.");
+  } catch (error) {
+    console.error("Error:", error);
+    alert("❌ Server error. Please try again later.");
   }
 });
 </script>
