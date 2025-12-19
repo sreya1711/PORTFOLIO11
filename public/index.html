@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sreya Rajesh | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; transition: background-color 0.3s ease, color 0.3s ease; }
+    .floating { animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .section-float { animation: float-section 6s ease-in-out infinite; overflow: auto; }
+    @keyframes float-section { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .glow { box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2); animation: glow-pulse 2.5s ease-in-out infinite; }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2); } 50% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3); } }
+    @keyframes blinkColor { 0%, 100% { color: #60a5fa; } 50% { color: #1e3a8a; } }
+    .blink { animation: blinkColor 1s infinite; }
+    #tsparticles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+  </style>
+</head>
+<body class="bg-white dark:bg-blue-900 text-gray-900 dark:text-gray-100 font-sans">
+
+  <div id="tsparticles"></div>
+
+  <nav class="flex justify-between items-center px-8 py-4 text-lg sticky top-0 bg-blue-100 dark:bg-gray-900 shadow-md z-50">
+    
+    
+    <div class="flex items-center gap-3">
+    <img 
+      src="images/SHUTTU.jpg" 
+      alt="Sreya"
+      class="w-10 h-10 rounded-full object-cover border-2 border-blue-500 shadow-md"
+    >
+    <h1 class="text-2xl font-bold blink text-blue-900 dark:text-white">
+      SREYA
+    </h1>
+  </div>
+    <div class="flex items-center gap-4">
+      <ul class="flex gap-6 text-blue-700 dark:text-blue-200">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="text-xl text-blue-900 dark:text-white hover:scale-110 transition">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section id="home" class="text-center py-16 px-4">
+   <div class="flex justify-center mb-8">
+  <div class="w-64 h-64 rounded-full border-4 border-blue-500 shadow-xl overflow-hidden floating">
+    <img
+      src="images/image1.jpg"
+      alt="Sreya Rajesh"
+      class="w-full h-full object-cover object-[50%_50%]"
+    >
+  </div>
+</div>
+
+
+    <h1 class="text-5xl font-extrabold tracking-wide text-white dark:text-blue-900">SREYA RAJESH</h1>
+    <p class="text-xl mt-3 text-blue-200 dark:text-gray-700">Aspiring Software Developer | Front-end developer</p>
+    <a href="SREYA RAJESH_RESUME (1).pdf (6).pdf" download class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+      ⬇ Download CV
+    </a>
+  </section>
+  <section id="about" class="max-w-7xl mx-auto px-6 py-16 text-white">
+  <h2 class="text-4xl font-bold text-center mb-14">About Me</h2>
+
+  <!-- 4 Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- CARD 1 : ABOUT -->
+    <div class="glow-box bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300">
+      <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
+        <i class="fas fa-user"></i> About
+      </h3>
+      <p class="text-sm leading-relaxed text-gray-200">
+        I’m <span class="font-semibold text-white">Sreya Rajesh</span>, a passionate front-end developer and aspiring software engineer.
+        I enjoy crafting clean, intuitive UIs and turning ideas into interactive web experiences.
+      </p>
+    </div>
+
+    
+    <!-- CARD : STRENGTHS -->
+<div class="glow-box bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300">
+  <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
+    <i class="fas fa-star"></i> Strengths
+  </h3>
+  <ul class="space-y-2 text-sm text-gray-200">
+    <li>💬 Strong Communication</li>
+    <li>🧠 Problem Solving</li>
+    <li>🤝 Team Collaboration</li>
+    <li>⏳ Time Management</li>
+    <li>🚀 Quick Learner</li>
+  </ul>
+</div>
+
+
+    <!-- CARD 3 : EDUCATION -->
+    <div class="glow-box bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300">
+      <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
+        <i class="fas fa-graduation-cap"></i> Education
+      </h3>
+      <p class="text-sm text-gray-200 leading-relaxed">
+        🎓 B.E. Computer Science Engineering  CGPA: 8.10
+        <br>
+        <span class="text-cyan-200">Pre-final year student</span>
+        <br><br>
+        Focused on full-stack development, problem solving, and modern web technologies.
+      </p>
+    </div>
+
+    <!-- CARD 4 : INTERESTS -->
+    <div class="glow-box bg-blue-900 rounded-2xl p-6 border border-blue-400 transition-all duration-300">
+      <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
+        <i class="fas fa-bullseye"></i> Goals
+      </h3>
+      <p class="text-sm text-gray-200 leading-relaxed">
+        🚀 Build impactful real-world projects  
+        <br>
+        🧠 Improve problem-solving skills  
+        <br>
+        🤝 Collaborate on meaningful tech solutions  
+        <br>
+        📈 Grow as a full-stack developer
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- SKILLS & TECHNOLOGIES -->
+<section class="max-w-7xl mx-auto px-6 py-16 text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">
+    Skills & Technologies
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- FRONTEND -->
+    <div class="skill-box">
+      <h3 class="skill-title">Frontend</h3>
+      <div class="skill-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+      </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="skill-box">
+      <h3 class="skill-title">Backend</h3>
+      <div class="skill-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+      </div>
+    </div>
+
+    <!-- PROGRAMMING -->
+    <div class="skill-box">
+      <h3 class="skill-title">Languages</h3>
+      <div class="skill-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+      </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="skill-box">
+      <h3 class="skill-title">Tools</h3>
+      <div class="skill-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="max-w-7xl mx-auto px-6 py-16 text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">
+    Achievements
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- HACKVOTRIX25 -->
+    <div class="achievement-card">
+      <i class="fas fa-trophy achievement-icon text-yellow-400"></i>
+      <h3 class="achievement-title">1st Prize</h3>
+      <p class="achievement-text font-semibold">HACKVOTRIX25</p>
+      <p class="achievement-subtext">
+        Secured first place by developing an "Automated Coconut Sorting System"
+        during the hackathon.
+      </p>
+    </div>
+
+    <!-- IDEATHON25 -->
+    <div class="achievement-card">
+      <i class="fas fa-medal achievement-icon text-orange-400"></i>
+      <h3 class="achievement-title">3rd Prize</h3>
+      <p class="achievement-text font-semibold">Ideathon 2025</p>
+      <p class="achievement-subtext">
+        Achieved for developing "Learning Management System" and effective idea presentation.
+      </p>
+    </div>
+
+    <!-- MCA HACKATHON -->
+    <div class="achievement-card">
+      <i class="fas fa-award achievement-icon text-sky-400"></i>
+      <h3 class="achievement-title">2nd Prize</h3>
+      <p class="achievement-text font-semibold">MCA Hackathon</p>
+      <p class="achievement-subtext">
+        Demonstrated strong teamwork and technical skills under time constraints by developing "Green Lifestyle and Finance Tracker".
+      </p>
+    </div>
+
+    <!-- CODECAMP -->
+    <div class="achievement-card">
+      <i class="fas fa-code achievement-icon text-emerald-400"></i>
+      <h3 class="achievement-title">2nd Prize</h3>
+      <p class="achievement-text font-semibold">CODECAMP</p>
+      <p class="achievement-subtext">
+        Excelled in n8n automation by making workflow of "Certificate presenting".
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Glow Styles (unchanged) -->
+  <style>
+    .glow-box {
+      transition: all 0.4s ease;
+    }
+
+    .glow-active {
+      box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 30px rgba(0, 255, 255, 0.4),
+        0 0 40px rgba(0, 255, 255, 0.3);
+      transform: scale(1.02);
+      border: 2px solid cyan;
+    }
+
+    .glow-box:hover {
+      box-shadow:
+        0 0 12px rgba(0, 300, 300, 0.7),
+        0 0 24px rgba(0, 300, 300, 0.6);
+    }
+
+    .glow-image:hover {
+      box-shadow:
+        0 0 15px rgba(59, 130, 246, 0.7),
+        0 0 30px rgba(96, 165, 250, 0.6),
+        0 0 45px rgba(147, 197, 253, 0.5);
+      transform: scale(1.02);
+    }
+
+    .glow-frontend:hover {
+      text-shadow: 0 0 10px #facc15, 0 0 20px #fde68a;
+    }
+
+    .glow-backend:hover {
+      text-shadow: 0 0 10px #4ade80, 0 0 20px #bbf7d0;
+    }
+
+    .glow-database:hover {
+      text-shadow: 0 0 10px #38bdf8, 0 0 20px #bae6fd;
+    }
+
+    .glow-tools:hover {
+      text-shadow: 0 0 10px #f43f5e, 0 0 20px #fecdd3;
+    }
+    .skill-box {
+  background: #1e3a8a;
+  border: 1px solid #38bdf8;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.skill-box:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  transform: translateY(-6px);
+}
+
+.skill-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #67e8f9;
+  margin-bottom: 1rem;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skill-icons img {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.6s ease;
+}
+
+.skill-box:hover .skill-icons img {
+  transform: rotate(360deg) scale(1.15);
+}
+.achievement-card {
+  background: #1e3a8a;
+  border: 1px solid #38bdf8;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.55);
+}
+
+.achievement-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e0f2fe;
+}
+
+.achievement-text {
+  font-size: 1rem;
+  color: #67e8f9;
+}
+
+.achievement-subtext {
+  font-size: 0.85rem;
+  color: #c7d2fe;
+  margin-top: 0.5rem;
+}
+
+
+  </style>
+</section>
+
+
+<section id="projects" class="max-w-7xl mx-auto px-6 py-16 text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+
+  <!-- FRONTEND PROJECTS -->
+  <h3 class="text-2xl font-semibold mb-6 text-cyan-300 text-center">Frontend Projects</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+    <!-- Sudoku Platform -->
+    <div class="bg-blue-900 rounded-2xl p-4 border border-blue-400 transition-all duration-300 glow-card">
+      <h3 class="text-xl font-semibold mb-2 text-cyan-300">Sudoku Platform</h3>
+      <img src="images/image.png" alt="Sudoku Project" class="rounded-lg mb-3 w-full h-32 object-cover border border-white">
+      <p class="mb-2 text-sm text-gray-200">Web-based Sudoku game with validation and timer using HTML, CSS, JS.</p>
+      <div class="flex items-center gap-2 mb-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5" alt="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-5 h-5" alt="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5" alt="JS">
+      </div>
+      <div class="flex gap-3 text-sm">
+        <a href="https://sudoku11.vercel.app/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fas fa-external-link-alt"></i> Live</a>
+        <a href="https://github.com/sreya1711/sudoku11" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <!-- Phonebook App -->
+    <div class="bg-blue-900 rounded-2xl p-4 border border-blue-400 transition-all duration-300 glow-card">
+      <h3 class="text-xl font-semibold mb-2 text-cyan-300">Phonebook App</h3>
+      <img src="images/image3.png" alt="Phonebook Project" class="rounded-lg mb-3 w-full h-32 object-cover border border-white">
+      <p class="mb-2 text-sm text-gray-200">Phonebook app using HTML, CSS, JS with C backend logic simulation.</p>
+      <div class="flex items-center gap-2 mb-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5" alt="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-5 h-5" alt="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5" alt="JS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="w-5 h-5" alt="C">
+      </div>
+      <div class="flex gap-3 text-sm">
+        <a href="https://phone-book-orpin.vercel.app/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fas fa-external-link-alt"></i> Live</a>
+        <a href="https://github.com/sreya1711/phone-book-/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <!-- Mood Journal -->
+    <div class="bg-blue-900 rounded-2xl p-4 border border-blue-400 transition-all duration-300 glow-card">
+      <h3 class="text-xl font-semibold mb-2 text-cyan-300">Mood Journal</h3>
+      <img src="images/image2.png" alt="Mood Journal Project" class="rounded-lg mb-3 w-full h-32 object-cover border border-white">
+      <p class="mb-2 text-sm text-gray-200">Mood-tracking journal app built with React.</p>
+      <div class="flex items-center gap-2 mb-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-5 h-5" alt="VS Code">
+      </div>
+      <div class="flex gap-3 text-sm">
+        <a href="https://mood-journal-swart.vercel.app/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fas fa-external-link-alt"></i> Live</a>
+        <a href="https://github.com/sreya1711/mood-journal" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MERN PROJECTS -->
+  <!-- MERN PROJECTS -->
+<h3 class="text-2xl font-semibold mb-6 text-cyan-300 text-center">MERN Projects</h3>
+<div class="flex justify-center mb-12">
+  <div class="bg-blue-900 rounded-2xl p-4 border border-blue-400 transition-all duration-300 glow-card w-80">
+    <h3 class="text-xl font-semibold mb-2 text-cyan-300">JOB-PORTAL</h3>
+    <img src="images/MERN1.jpg" alt="MERN Project" class="rounded-lg mb-3 w-full h-32 object-cover border border-white">
+<p class="mb-2 text-sm text-gray-200">Full-stack MERN Job Portal with user authentication, job postings, and application management.</p>
+    <div class="flex items-center gap-2 mb-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-5 h-5" alt="NodeJS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-5 h-5" alt="Express">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-5 h-5" alt="MongoDB">
+    </div>
+    <div class="flex gap-3 text-sm">
+      <a href="https://github.com/sreya1711/Job-portal/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- ML PROJECTS -->
+<h3 class="text-2xl font-semibold mb-6 text-cyan-300 text-center">Machine Learning Projects</h3>
+<div class="flex justify-center">
+  <div class="bg-blue-900 rounded-2xl p-4 border border-blue-400 transition-all duration-300 glow-card w-80">
+    <h3 class="text-xl font-semibold mb-2 text-cyan-300">ML Stock Predictor</h3>
+    <img src="images/ML.jpg" alt="ML Project" class="rounded-lg mb-3 w-full h-32 object-cover border border-white">
+<p class="mb-2 text-sm text-gray-200">Automated Coconut Sorting System using machine learning techniques.</p>
+    <div class="flex items-center gap-2 mb-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5" alt="Python">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" class="w-5 h-5" alt="Streamlit">
+    </div>
+    <div class="flex gap-3 text-sm">
+      <a href="https://github.com/sreya1711/Coconut/" target="_blank" class="text-blue-400 hover:text-blue-200"><i class="fab fa-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+  <!-- Glowing effect -->
+  <style>
+    .glow-card:hover {
+      box-shadow:
+        0 0 12px rgba(0, 255, 255, 0.4),
+        0 0 24px rgba(0, 255, 255, 0.3),
+        0 0 36px rgba(0, 255, 255, 0.2);
+      transform: scale(1.02);
+      border-color: cyan;
+    }
+  </style>
+<!-- CONTACT -->
+<!-- CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-16 text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">Contact Me</h2>
+
+  <div class="grid gap-10 md:grid-cols-3">
+
+    <!-- LEFT: FORM -->
+<!-- LEFT: FORM -->
+<div class="bg-blue-900/70 rounded-2xl p-8 border border-cyan-400
+            hover:shadow-[0_0_20px_#0ff] transition-shadow duration-300">
+  <form action="https://formspree.io/f/xkgzwjky" method="POST" class="space-y-6">
+    <!-- hidden fields (optional but useful) -->
+    <input type="hidden" name="_subject" value="New message from portfolio">
+
+    <div>
+      <label for="name" class="block mb-2 text-sm font-semibold text-cyan-300">Name</label>
+      <input id="name" name="name" required
+             class="w-full p-3 rounded-lg bg-blue-800 border border-blue-500 placeholder-gray-400 text-white
+                    focus:outline-none focus:ring-2 focus:ring-cyan-400"
+             placeholder="Your name">
+    </div>
+
+    <div>
+      <label for="email" class="block mb-2 text-sm font-semibold text-cyan-300">Email</label>
+      <input id="email" name="email" type="email" required
+             class="w-full p-3 rounded-lg bg-blue-800 border border-blue-500 placeholder-gray-400 text-white
+                    focus:outline-none focus:ring-2 focus:ring-cyan-400"
+             placeholder="you@example.com">
+    </div>
+
+    <div>
+      <label for="message" class="block mb-2 text-sm font-semibold text-cyan-300">Message</label>
+      <textarea id="message" name="message" rows="5" required
+                class="w-full p-3 rounded-lg bg-blue-800 border border-blue-500 placeholder-gray-400 text-white
+                       focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                placeholder="Your message..."></textarea>
+    </div>
+
+    <button type="submit"
+            class="bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-blue-500 hover:to-cyan-500
+                   px-6 py-2 rounded-lg font-semibold shadow-lg transition-all">
+      Send Message
+    </button>
+  </form>
+</div>
+
+
+
+    <!-- MIDDLE: SOCIALS -->
+     <div class="bg-blue-900/70 rounded-2xl p-8 border border-cyan-400
+            hover:shadow-[0_0_20px_#0ff] transition-shadow duration-300
+            flex flex-col gap-4">
+      <h3 class="text-cyan-300 text-lg font-bold mb-4">Connect with Me</h3>
+
+      <a href="https://github.com/sreya1711/" target="_blank" class="flex items-center gap-2">
+        <i class="fab fa-github text-xl text-cyan-300"></i><span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sreya-rajesh11/" target="_blank" class="flex items-center gap-2">
+        <i class="fab fa-linkedin text-xl text-cyan-300"></i><span>LinkedIn</span>
+      </a>
+      <a href="https://leetcode.com/u/Sreya_11/" target="_blank" class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/leetcode.svg" alt="LeetCode" class="w-5 h-5">
+        <span>LeetCode</span>
+       <a href="https://www.geeksforgeeks.org/user/sreyarajed9u0/" target="_blank" class="flex items-center gap-2">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksforGeeks" class="w-5 h-5">
+  <span>GeeksforGeeks</span>
+</a>
+
+
+      <a href="mailto:sreyarajesh110805@gmail.com" class="flex items-center gap-2">
+        <i class="fas fa-envelope text-xl text-cyan-300"></i><span>Email</span>
+      </a>
+      <a href="tel:+918848916341" class="flex items-center gap-2">
+        <i class="fas fa-phone-alt text-xl text-cyan-300"></i><span>Phone</span>
+      </a>
+    </div>
+
+    <!-- RIGHT: CTA -->
+     <!-- RIGHT: Collaboration container -->
+<div class="bg-blue-900/70 rounded-2xl p-8 border border-cyan-400
+            hover:shadow-[0_0_20px_#0ff] transition-shadow duration-300
+            flex flex-col items-center justify-center">
+  <p class="text-lg font-semibold mb-4 text-center">
+    Want to collaborate on a project?<br>
+    <span class="text-sm text-cyan-200 italic">
+      Got a project in mind? Let’s turn it into a reality.<br>
+      I enjoy solving problems and crafting smooth user experiences.<br>
+      Reach out — I’d love to team up and make it happen.
+    </span>
+  </p>
+
+  <!-- LINKEDIN MESSAGE BUTTON -->
+  <a href="https://www.linkedin.com/in/sreya-rajesh11/" target="_blank"
+     class="block text-center bg-cyan-500 hover:bg-cyan-600 font-bold py-3 px-8 rounded transition">
+    Let’s Talk on LinkedIn 💬
+  </a>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-16 py-4 text-center text-sm bg-blue-200 text-black border-t border-blue-800">
+  © 2025 Sreya Rajesh. All rights reserved.
+</footer>
+<center><h1>Thank you for visiting❤️</h1></center>
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: false },
+      background: { color: { value: "#1e3a8a" } },
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: ["#ffffff", "#93c5fd"] },
+        shape: { type: "circle" },
+        opacity: { value: 0.6, random: true },
+        size: { value: 3, random: true },
+        move: { enable: true, speed: 1.5, direction: "none", outModes: { default: "bounce" } },
+        links: { enable: true, distance: 100, color: "#60a5fa", opacity: 0.4, width: 1 }
+      },
+      interactivity: {
+        detectsOn: "window",
+        events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "repulse" }, resize: true },
+        modes: { repulse: { distance: 150, duration: 0.6 } }
+      },
+      retina_detect: true
+    });
+
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    if (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("dark");
+      themeIcon.classList.replace("fa-moon", "fa-sun");
+    }
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      if (isDark) { themeIcon.classList.replace("fa-moon", "fa-sun"); }
+      else { themeIcon.classList.replace("fa-sun", "fa-moon"); }
+      console.log("Theme toggled:", isDark ? "dark" : "light");
+
+    });
+
+  
+  </script>
+  <script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:3000/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message })
+    });
+
+    const data = await response.json(); // parse JSON from backend
+
+    if (data.status === "success") {
+      alert(data.message);
+      form.reset();
+    } else {
+      alert(data.message || "Failed to send message.");
+    }
+
+  } catch (err) {
+    console.error("Error sending message:", err);
+    alert("Failed to send message. Please try again later.");
+  }
+});
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,29 @@
+{
+  "name": "portfolio11",
+  "version": "1.0.0",
+  "description": "Welcome to my personal developer portfolio built with HTML, CSS, and a touch of animation. This site showcases who I am, the projects I've worked on, and how to get in touch with me!\r ## 🚀 Live Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreya1711/PORTFOLIO11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sreya1711/PORTFOLIO11/issues"
+  },
+  "homepage": "https://github.com/sreya1711/PORTFOLIO11#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.2"
+  }
+}
