@@ -582,6 +582,31 @@
   © 2025 Sreya Rajesh. All rights reserved.
 </footer>
 <center><h1>Thank you for visiting❤️</h1></center>
+<script>
+  
+let jwtToken = null;
+
+async function fetchToken() {
+  const res = await fetch("/get-token");
+
+  if (!res.ok) {
+    throw new Error("Token fetch failed");
+  }
+
+  const data = await res.json();
+  jwtToken = data.token;
+  console.log("✅ JWT token loaded");
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await fetchToken();
+  } catch (err) {
+    console.error("❌ Token error:", err);
+  }
+});
+</script>
+
   <script>
     tsParticles.load("tsparticles", {
       fullScreen: { enable: false },
@@ -622,6 +647,7 @@
   
   </script>
   <script>
+
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", async (e) => {
@@ -632,37 +658,117 @@ form.addEventListener("submit", async (e) => {
   const message = document.getElementById("message").value.trim();
 
   if (!name || !email || !message) {
-    alert("Please fill in all fields.");
+    alert("⚠️ Please fill in all fields.");
+    return;
+  }
+
+  if (!jwtToken) {
+    alert("❌ Security token not loaded. Please refresh.");
     return;
   }
 
   try {
-    const response = await fetch(
-      "https://portfolio11-2.onrender.com/contact",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name, email, message })
-      }
-    );
+    const response = await fetch("http://localhost:3000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${jwtToken}`   // ✅ IMPORTANT
+      },
+      body: JSON.stringify({ name, email, message })
+    });
 
     const data = await response.json();
 
-    if (response.ok) {
-      alert("✅ Message sent successfully!");
-      form.reset();
-    } else {
-      alert(data.message || "❌ Failed to send message");
+    if (!response.ok) {
+      alert("❌ " + data.message);
+      return;
     }
 
+    alert("✅ Message sent securely!");
+    form.reset();
+
   } catch (error) {
-    console.error("Error:", error);
-    alert("❌ Server error. Please try again later.");
+    console.error("❌ Contact Form Error:", error);
+    alert("❌ Backend server not running.");
   }
 });
 </script>
+<script>
+  const form = document.getElementById("contact-form");
+  const sendBtn = document.getElementById("send-btn");
+
+  let jwtToken = null;
+
+  /* ---------------- FETCH JWT TOKEN ---------------- */
+  async function loadToken() {
+    try {
+      const res = await fetch("/get-token");
+      if (!res.ok) throw new Error("Token fetch failed");
+
+      const data = await res.json();
+      jwtToken = data.token;
+
+      sendBtn.disabled = false;
+      sendBtn.classList.remove("opacity-50", "cursor-not-allowed");
+
+      console.log("✅ Security token loaded");
+    } catch (err) {
+      console.error(err);
+      alert("❌ Unable to load security token. Refresh the page.");
+    }
+  }
+
+  /* ---------------- FORM SUBMIT ---------------- */
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("⚠️ Please fill in all fields.");
+      return;
+    }
+
+    if (!jwtToken) {
+      alert("❌ Security token not ready. Please wait.");
+      return;
+    }
+
+    sendBtn.disabled = true;
+
+    try {
+      const res = await fetch("/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${jwtToken}`
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Submission failed");
+      }
+
+      alert("✅ Message sent successfully!");
+      form.reset();
+
+    } catch (err) {
+      console.error(err);
+      alert("❌ Server error. Please try again later.");
+    } finally {
+      sendBtn.disabled = false;
+    }
+  });
+
+  /* ---------------- INIT ---------------- */
+  document.addEventListener("DOMContentLoaded", loadToken);
+</script>
+
 
 </body>
 </html> 

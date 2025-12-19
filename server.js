@@ -1,68 +1,77 @@
 require("dotenv").config();
-
 const express = require("express");
-const path = require("path");
+const mongoose = require("mongoose");
+const cors = require("cors");
 const jwt = require("jsonwebtoken");
+const path = require("path");
+
 const Contact = require("./mongo");
 
 const app = express();
-const PORT = process.env.PORT || 1000;
+const PORT = 3000;
 
-// Middleware
+/* -------------------- MIDDLEWARE -------------------- */
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
-// Serve static files
+/* -------------------- SERVE FRONTEND -------------------- */
 app.use(express.static(path.join(__dirname, "public")));
 
-// ✅ Fix Cannot GET /
+/* -------------------- DB CONNECT -------------------- */
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.error("❌ MongoDB error:", err));
+
+/* -------------------- HOME ROUTE -------------------- */
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// ✅ Contact route (SAVE JWT IN DB)
+/* -------------------- JWT TOKEN API -------------------- */
+app.get("/get-token", (req, res) => {
+  const token = jwt.sign(
+    { source: "portfolio-frontend" },
+    process.env.JWT_SECRET,
+    { expiresIn: "15m" }
+  );
+  res.json({ token });
+});
+
+/* -------------------- CONTACT API -------------------- */
 app.post("/contact", async (req, res) => {
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({
-      status: "error",
-      message: "All fields are required"
-    });
-  }
-
   try {
-    // Generate JWT
-    const token = jwt.sign(
-      { email },
-      process.env.JWT_SECRET,
-      { expiresIn: "1h" }
-    );
+    const authHeader = req.headers.authorization;
+    if (!authHeader) {
+      return res.status(401).json({ message: "Authorization token missing" });
+    }
 
-    // Save to MongoDB (token included)
-    const contact = await Contact.create({
+    const token = authHeader.split(" ")[1];
+    jwt.verify(token, process.env.JWT_SECRET);
+
+    const { name, email, message } = req.body;
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: "All fields required" });
+    }
+
+    const newContact = new Contact({
       name,
       email,
       message,
       token
     });
 
-    res.status(201).json({
-      status: "success",
-      message: "Message saved successfully",
-      token
-    });
+    await newContact.save();
 
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({
-      status: "error",
-      message: "Server error"
-    });
+    res.status(201).json({ message: "Message stored successfully" });
+
+  } catch (err) {
+    console.error(err.message);
+    res.status(403).json({ message: "Invalid or expired token" });
   }
 });
 
-// Start server
+/* -------------------- SERVER START -------------------- */
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
