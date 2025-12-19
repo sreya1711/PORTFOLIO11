@@ -10,13 +10,13 @@ Welcome to my personal developer portfolio built with HTML, CSS, and a touch of 
 
 ## 📌 Features
 
-- 🎨 Stylish and responsive design
-- 🧠 About Me, Skills, and Interests sections
-- 💡 Animated effects and creative layout
-- 📁 Project highlights with descriptions
-- 📬 Contact section with icons and links
-- 🌙 Light/Dark mode 
-
+- 🌐 **Responsive Design**: Works seamlessly on desktop, tablet, and mobile.  
+- 🌙 **Dark/Light Mode Toggle**: Persistent theme with Tailwind CSS.  
+- ✨ **Interactive Particles Background**: Using `tsparticles`.  
+- 📧 **Contact Form**: Sends messages using Formspree and also integrated with backend POST API.  
+- 🏆 **Achievements & Skills**: Cards showcasing strengths, education, goals, and technologies.  
+- 🔐 **JWT Authentication**: Implemented in backend for secure message sending.  
+- 🎨 **Smooth Animations & Hover Effects**: Tailwind CSS + custom CSS keyframes.
 ---
 
 ## 🛠️ Built With
@@ -24,14 +24,6 @@ Welcome to my personal developer portfolio built with HTML, CSS, and a touch of 
 - **Frontend:** HTML, CSS (or Tailwind), JavaScript, ReactJS
 - **Animations:** Custom CSS + JS
 - **Version Control:** Git & GitHub
-
----
-## 🧩 Future Enhancements
-
-- 🔄 Add **Dark Mode** toggle  
-- 📬 Integrate a **working Contact Form** (e.g., with EmailJS)  
-- 🌍 Support for **multiple languages**  
-- 📸 Add **live previews of projects** with modal/gallery view  
 
 ---
 
